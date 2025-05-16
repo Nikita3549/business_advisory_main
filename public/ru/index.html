@@ -41,44 +41,54 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD8F9P8"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
-    <aside class="side__navigation">
-        <div class="lang__selector closed" style="margin-top: 120px;" tabindex="0">
-            <a class="logo__link spain__link" href="/" tabindex="0">
-                <img id="flag__spain" src="/img/spain-flag.svg" alt="cambiar al español">
-            </a>
-            <a class="logo__link russian__link" href="/ru/" tabindex="0">
-                <img id="flag__russian" src="/img/russian-flag.svg" alt="русский язык">
-            </a>
-            <a class="logo__link english__link" href="/en/" tabindex="0">
-                <img id="flag__english" src="/img/uk-flag.svg" alt="english">
-            </a>
-            <div class="flag__handler icon"><img id="arrow__icon" src="/img/arrow__icon.svg" alt="icon for language selection dropdown menu" tabindex="0"></div>
-        </div>
-    </aside>
     <header class="main__header">
         <nav class="nav__bar">
-            <a class="logo__link"href="/ru/">
-                <div class="logo">
-                    <img id="logo" src="/img/logo.svg" style="width: 50px; height: auto; margin-left: 30px; margin-top: 5px;" alt="logo">
-                </div>
+            <a style="height: 9vh;" href="/ru/">
+                <video autoplay muted loop playsinline style="height: 9vh; padding: 0;">
+                <source src="/img/4k 120 fps new-logo-gif-pba-short-new.mov" type="video/mp4">
+                Your browser doesn't support this video file.
+                </video>
             </a>
-            <ul class="nav__links">
+            
+            <ul class="nav__links" style="display: flex; align-items: center; gap: auto; list-style: none;">
                 <a href="/ru/">Главная</a>
                 <a href="/ru/services/">Услуги</a>
-                <a href="/panel/">Личный Кабинет</a>
+
+                <div class="language-selector" id="langButton">
+                    <a style="display: flex; align-items: center; cursor: pointer; margin: 5px;">
+                        <img style="width: 32px;" src="/img/icons8-earth-50.png" alt="Language">
+                    </a>
+                    <div class="language-options">
+                        <a href="/ru/">RU</a>
+                        <a href="/">ES</a>
+                        <a href="/en/">EN</a>
+                    </div>
+                </div>
+
+
+                    <a href="/panel/" style="
+                    background-color: rgb(33, 33, 33);
+                    color: white;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    border-radius: 8px;
+                    font-size: 20px;
+                    font-weight: 500;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                    transition: background-color 0.3s ease;
+                    "
+                    onmouseover="this.style.backgroundColor='rgba(33, 33, 33, 0.8)'"
+                    onmouseout="this.style.backgroundColor='rgb(33, 33, 33)'">
+                    Личный Кабинет
+                    </a>
+
             </ul>
         </nav>
     </header>
-
+    
     <header class="header">
         <div class="header__inner">
-            <a class="header__text_wrapper" href="/ru/">
-                <video autoplay muted loop playsinline style="width: 60vw;">
-                    <source src="/img/4k 120 fps new-logo-gif-pba-short-new.mov" type="video/mp4">
-                    Your browser doesn't support this video file
-                  </video>
-            </a>
+            
         </div>
     </header>
     <div class="main__top">
@@ -288,7 +298,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js" integrity="sha512-Ey+nIg+Ue8gUAaCNjR1KHR8nwDjWn9QXoQbynR/X+V66s6u1oqynnuRQ8zSgg5f5gBNb2Bzsu1pItCi3sPkbfA==" crossorigin="anonymous"></script>
     <script src="/js/hystmodal.min.js"></script>
     <script src="/js/main.js"></script>
-    
+    <script>
+        const langButton = document.getElementById('langButton');
+        langButton.addEventListener('click', () => {
+          langButton.classList.toggle('active');
+        });
+      
+        document.addEventListener('click', (e) => {
+          if (!langButton.contains(e.target)) {
+            langButton.classList.remove('active');
+          }
+        });
+      </script>
 </body>
 
 </html>

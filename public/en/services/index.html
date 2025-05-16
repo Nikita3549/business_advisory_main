@@ -42,45 +42,54 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD8F9P8"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <aside class="side__navigation">
-        <a class="side__link" href="/en/">
-            MAIN
-           </a>
-        <div class="lang__selector closed">
-            <a class="logo__link spain__link" href="/services/">
-                <img id="flag__spain" src="/img/spain-flag.svg" alt="cambiar al español">
-            </a>
-            <a class="logo__link russian__link" href="/ru/services/">
-                <img id="flag__russian" src="/img/russian-flag.svg" alt="русский язык">
-            </a>
-            <a class="logo__link english__link" href="/en/services/">
-                <img id="flag__english" src="/img/uk-flag.svg" alt="english">
-            </a>
-            <div class="flag__handler icon"><img id="arrow__icon" src="/img/arrow__icon.svg" alt="icon for language selection dropdown menu"></div>
-        </div>
-    </aside>
     <header class="main__header">
         <nav class="nav__bar">
-            <a class="logo__link"href="/en/">
-                <div class="logo">
-                    <img id="logo" src="/img/logo.svg" style="width: 50px; height: auto; margin-left: 30px; margin-top: 5px;" alt="logo">
-                </div>
+            <a style="height: 9vh;" href="/en/">
+                <video autoplay muted loop playsinline style="height: 9vh; padding: 0;">
+                <source src="/img/4k 120 fps new-logo-gif-pba-short-new.mov" type="video/mp4">
+                Your browser doesn't support this video file.
+                </video>
             </a>
-            <ul class="nav__links">
+            
+            <ul class="nav__links" style="display: flex; align-items: center; gap: auto; list-style: none;">
                 <a href="/en/">Home</a>
                 <a href="/en/services/">Services</a>
-                <a href="/panel/">Private Area</a>
+
+                <div class="language-selector" id="langButton">
+                    <a style="display: flex; align-items: center; cursor: pointer; margin: 5px;">
+                        <img style="width: 32px;" src="/img/icons8-earth-50.png" alt="Language">
+                    </a>
+                    <div class="language-options">
+                        <a href="/ru/services/">RU</a>
+                        <a href="/services/">ES</a>
+                        <a href="/en/services/">EN</a>
+                    </div>
+                </div>
+
+
+                    <a href="/panel/" style="
+                    background-color: rgb(33, 33, 33);
+                    color: white;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    border-radius: 8px;
+                    font-size: 20px;
+                    font-weight: 500;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                    transition: background-color 0.3s ease;
+                    "
+                    onmouseover="this.style.backgroundColor='rgba(33, 33, 33, 0.8)'"
+                    onmouseout="this.style.backgroundColor='rgb(33, 33, 33)'">
+                    Private Area
+                    </a>
+
             </ul>
         </nav>
     </header>
+    
     <header class="header">
         <div class="header__inner">
-            <a class="header__text_wrapper" href="/en/">
-                <video autoplay muted loop playsinline style="width: 60vw;">
-                    <source src="/img/4k 120 fps new-logo-gif-pba-short-new.mov" type="video/mp4">
-                    Your browser doesn't support this video file
-                </video>
-            </a>
+            
         </div>
     </header>
     <div class="app__container">
@@ -350,7 +359,18 @@
         <script src="/js/ScrollTrigger.min.js"></script>
         <script src="/js/hystmodal.min.js"></script>
         <script src="/js/main.js"></script>
-            
+        <script>
+            const langButton = document.getElementById('langButton');
+            langButton.addEventListener('click', () => {
+              langButton.classList.toggle('active');
+            });
+          
+            document.addEventListener('click', (e) => {
+              if (!langButton.contains(e.target)) {
+                langButton.classList.remove('active');
+              }
+            });
+          </script>
 </body>
 
 </html>
