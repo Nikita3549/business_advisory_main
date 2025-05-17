@@ -43,18 +43,21 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="main__header">
-        <nav class="nav__bar">
-            <a style="height: 9vh;" href="/en/">
-                <video autoplay muted loop playsinline style="height: 9vh; padding: 0;">
-                <source src="/img/4k 120 fps new-logo-gif-pba-short-new.mp4" type="video/mp4">
-                Your browser doesn't support this video file.
-                </video>
-            </a>
-            
-            <ul class="nav__links" style="display: flex; align-items: center; gap: auto; list-style: none;">
-                <a href="/en/">Home</a>
-                <a href="/en/services/">Services</a>
-
+        <a style="height: 9vh;" href="/">
+            <video autoplay muted loop playsinline style="height: 9vh; padding: 0;">
+            <source src="/img/4k 120 fps new-logo-gif-pba-short-new.mp4" type="video/mp4">
+            Your browser doesn't support this video file.
+            </video>
+        </a>
+        
+            <div class="burger" id="burger">
+              ☰
+            </div>
+        
+            <ul class="nav__links" id="navLinks">
+              <a href="/en/">Home</a>
+              <a href="/en/services/">Services</a>
+        
                 <div class="language-selector" id="langButton">
                     <a style="display: flex; align-items: center; cursor: pointer; margin: 5px;">
                         <img style="width: 32px;" src="/img/icons8-earth-50.png" alt="Language">
@@ -65,26 +68,12 @@
                         <a href="/en/services/">EN</a>
                     </div>
                 </div>
-
-
-                    <a href="/panel/" style="
-                    background-color: rgb(33, 33, 33);
-                    color: white;
-                    padding: 10px 20px;
-                    text-decoration: none;
-                    border-radius: 8px;
-                    font-size: 20px;
-                    font-weight: 500;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-                    transition: background-color 0.3s ease;
-                    "
-                    onmouseover="this.style.backgroundColor='rgba(33, 33, 33, 0.8)'"
-                    onmouseout="this.style.backgroundColor='rgb(33, 33, 33)'">
-                    Private Area
-                    </a>
-
+        
+              <div>
+                <a href="/panel/" class="private__button">Private Area</a>
+              </div>
             </ul>
-        </nav>
+          </nav>
     </header>
     
     <header class="header">
@@ -371,6 +360,11 @@
               }
             });
           </script>
+            <script>
+                document.getElementById('burger').addEventListener('click', function () {
+                    document.getElementById('navLinks').classList.toggle('show');
+                });
+            </script>
 </body>
 
 </html>

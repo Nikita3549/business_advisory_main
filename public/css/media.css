@@ -1,4 +1,4 @@
-@media (min-width: 360px) and (min-height: 580px) {
+@media (min-width: 360px){
     .container,
     .app__container {
         padding: 0 24px;
@@ -7,8 +7,8 @@
         padding: 24px 24px;
     }
     .main__top_title {
-        font-size: 4rem;
-        line-height: 4.8rem;
+        font-size: 2rem;
+        line-height: 3rem;
         margin-bottom: 40px;
     }
     .main__mid_text {

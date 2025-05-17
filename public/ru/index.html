@@ -43,17 +43,21 @@
     <!-- End Google Tag Manager (noscript) -->
     <header class="main__header">
         <nav class="nav__bar">
-            <a style="height: 9vh;" href="/ru/">
+            <a style="height: 9vh;" href="/">
                 <video autoplay muted loop playsinline style="height: 9vh; padding: 0;">
                 <source src="/img/4k 120 fps new-logo-gif-pba-short-new.mp4" type="video/mp4">
                 Your browser doesn't support this video file.
                 </video>
             </a>
-            
-            <ul class="nav__links" style="display: flex; align-items: center; gap: auto; list-style: none;">
-                <a href="/ru/">Главная</a>
-                <a href="/ru/services/">Услуги</a>
-
+        
+            <div class="burger" id="burger">
+              ☰
+            </div>
+        
+            <ul class="nav__links" id="navLinks">
+              <a href="/ru/">Главная</a>
+              <a href="/ru/services/">Услуги</a>
+        
                 <div class="language-selector" id="langButton">
                     <a style="display: flex; align-items: center; cursor: pointer; margin: 5px;">
                         <img style="width: 32px;" src="/img/icons8-earth-50.png" alt="Language">
@@ -64,26 +68,12 @@
                         <a href="/en/">EN</a>
                     </div>
                 </div>
-
-
-                    <a href="/panel/" style="
-                    background-color: rgb(33, 33, 33);
-                    color: white;
-                    padding: 10px 20px;
-                    text-decoration: none;
-                    border-radius: 8px;
-                    font-size: 20px;
-                    font-weight: 500;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-                    transition: background-color 0.3s ease;
-                    "
-                    onmouseover="this.style.backgroundColor='rgba(33, 33, 33, 0.8)'"
-                    onmouseout="this.style.backgroundColor='rgb(33, 33, 33)'">
-                    Личный Кабинет
-                    </a>
-
+        
+              <div>
+                <a href="/panel/" class="private__button">Личный Кабинет</a>
+              </div>
             </ul>
-        </nav>
+          </nav>
     </header>
     
     <header class="header">
@@ -181,6 +171,24 @@
                     <div class="main__bottom_text">
                         <h2>Зарегистрируйтесь в личном кабинете и получите персональную поддержку с самого начала. Быстро, удобно и без обязательств.</h2>
                     </div>
+                </div>
+                <div style="display: flex; justify-content: center; margin-top: 40px;">
+                    <a href="/panel/" style="
+                      background-color: #007BFF;
+                      color: white;
+                      padding: 20px 48px;
+                      text-decoration: none;
+                      border-radius: 8px;
+                      font-size: 20px;
+                      font-weight: 500;
+                      margin-bottom: 30px;
+                      background-color: rgb(33, 33, 33);
+                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                      transition: background-color 0.3s ease;
+                    " onmouseover="this.style.backgroundColor='#rgba(33, 33, 33, 0.5)'"
+                       onmouseout="this.style.backgroundColor='rgb(33, 33, 33)'">
+                       Создать аккаунт
+                    </a>
                 </div>
             </div>
         </div>
@@ -310,6 +318,11 @@
           }
         });
       </script>
+        <script>
+            document.getElementById('burger').addEventListener('click', function () {
+                document.getElementById('navLinks').classList.toggle('show');
+            });
+        </script>
 </body>
 
 </html>

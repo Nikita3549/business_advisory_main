@@ -296,7 +296,7 @@ li {
 .app__title {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 3rem;
     color: #212121;
 }
@@ -988,4 +988,38 @@ textarea.form_input {
     margin: 15vh auto;
     max-width: 65ch;
     padding: 2ch;
+}
+.burger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    color: black;
+  }
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav__links {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background: white;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none;
+    border: 1px solid rgb(0, 0, 0); /* Светлый контур */
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  .nav__links.show {
+    display: flex;
+  }
+
+  .nav__links li {
+    margin-bottom: 10px;
+  }
 }
