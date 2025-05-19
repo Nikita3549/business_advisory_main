@@ -16,15 +16,15 @@ app.get('/en', (_req, res) => {
 app.get('/ru', (_req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'ru', 'index.html'));
 });
-app.get('/approach', (_req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'approach', 'index.html'));
+app.get('/services', (_req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'services', 'index.html'));
 });
 
-app.get('/en/approach', (_req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'en', 'approach', 'index.html'));
+app.get('/en/services', (_req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'en', 'services', 'index.html'));
 });
-app.get('/ru/approach', (_req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'ru', 'approach', 'index.html'));
+app.get('/ru/services', (_req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'ru', 'services', 'index.html'));
 });
 
 app.use((_req, res) => {

@@ -84,6 +84,13 @@ font-family: 'Raleway', sans-serif;
     color: #007bff;
 }
 
+.nav__links .private__button{
+    color: white;
+}
+.nav__links .private__button:hover{
+    color: white;
+}
+
 
 * {
     box-sizing: border-box;
@@ -918,7 +925,9 @@ textarea.form_input {
     opacity: 0;
     transition: all 0.8s ease 0.1s;
 }
-
+.private__button{
+    color: white!;
+}
 .popup__close {
     display: inline;
     color: #fff;
@@ -1000,6 +1009,9 @@ textarea.form_input {
   .burger {
     display: block;
   }
+  .private__button{
+    color: #333;
+  }
 
   .nav__links {
     position: absolute;
@@ -1022,4 +1034,7 @@ textarea.form_input {
   .nav__links li {
     margin-bottom: 10px;
   }
+  .nav__links .private__button{
+    color: #333;
+}
 }
